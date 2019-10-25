@@ -1,0 +1,17 @@
+.delete-button {
+    display: inline-block; 
+    margin-left: 3px;
+}
+
+.list-unstyled {
+    padding-top : 10px;
+}
+
+.item-list{
+    min-height: 400px;
+    max-height: 400px;
+    background-color : gainsboro;
+    opacity : 0.4;
+    overflow: scroll;
+}
+  

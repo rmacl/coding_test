@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Container, Row, Col, Button } from 'reactstrap';
+import SelectList from './select';
+import ItemList from './item';
 
-const App: React.FC = () => {
+function App() {
+  const [selectValue, setSelectValue] = useState<string>('');
+  const [itemList, setItemList] = useState<string[]>([]);
+
+  const handleItem = () => {
+    if (selectValue !== '') {
+      setItemList([...itemList, selectValue]);
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Container>
+        <div className="section" />
+        <Row>
+          <Col lg={8}>
+            <SelectList selectValue={selectValue} setSelectValue={setSelectValue} />
+          </Col>
+        </Row>
+
+        <Row className="component-space">
+          <Col>
+            <Button outline color="secondary" onClick={() => handleItem()} disabled={(selectValue === '') ? true : false}> Add to List </Button>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg={8}>
+            <ItemList itemList={itemList} setItemList={setItemList} />
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 

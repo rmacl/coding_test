@@ -5,12 +5,14 @@
   "dependencies": {
     "@types/jest": "24.0.19",
     "@types/node": "12.11.7",
-    "@types/react": "16.9.10",
-    "@types/react-dom": "16.9.2",
+    "@types/react": "^16.9.10",
+    "@types/react-dom": "^16.9.2",
+    "bootstrap": "^4.3.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
-    "typescript": "3.6.4"
+    "reactstrap": "^8.1.1",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,5 +34,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/reactstrap": "^8.0.6",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "1.18.2",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typings": "^2.1.1"
   }
 }
