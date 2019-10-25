@@ -1,7 +1,5 @@
 import React from 'react';
-import './index.css';
 import { Label, Input } from 'reactstrap';
-
 import { dataList, dataProps } from '../data';
 
 //usestate prop type
